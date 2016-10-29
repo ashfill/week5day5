@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<div class=" Admin_Body">
+    @Html.ActionLink("Add A New Genre", "Create", "Genres")
+    @Html.ActionLink("Add A New Movie", "Create", "Movies")
+    @Html.ActionLink("Remove A Movie", "Index", "Movies")
+    @Html.ActionLink("Add A New Customer", "Create", "CustomerInfoes")
+    @Html.ActionLink("Remove A Customer", "Index", "CustomerInfoes")
+</div>

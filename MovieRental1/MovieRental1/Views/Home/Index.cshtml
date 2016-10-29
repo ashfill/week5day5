@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Movie Rentals</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Rent A Movie</h2>
+        <p>@Html.ActionLink("Movies", "Index", "Movies")</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Return Movies</h2>
+        <p>@Html.ActionLink("Records", "Index", "RentalRecords")</p>
+    </div>
+    <div class="col-md-4">
+        <h2>View Overdue movies</h2>
+        <p>@Html.ActionLink("Overdue", "Overdue", "Home")</p>
+    </div>
+</div>
