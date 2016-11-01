@@ -164,7 +164,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Controllers\RentalRecordsController.cs" />
-    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="CustomerInfo.cs">
       <DependentUpon>Movies.tt</DependentUpon>
     </Compile>

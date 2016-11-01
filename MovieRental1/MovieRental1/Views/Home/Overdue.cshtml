@@ -5,4 +5,32 @@
 }
 
 <h2>Overdue</h2>
+@{
+    MovieRentalEntities db = new MovieRentalEntities();
+
+    var CertainRentals = from c in db.RentalRecords
+                         join o in db.Movies
+                         on c.MovieID equals o.MovieID
+                         where c.DueDate < DateTime.Today
+                         select new
+                         {
+                             Ren = c.DueDate,
+                             Den = o.MovieName
+                         };
+
+
+    <table style="border:2px solid Blue">
+        <tr>
+            <th style="border:2px solid Blue">Movie Name</th>
+            <th style="border:2px solid Red">Due Date</th>
+        </tr>
+        @foreach (var c in CertainRentals)
+        {
+        <tr style="border:2px solid Blue">
+            <td style="border:2px solid Blue">@c.Den</td>
+            <td style="border:2px solid Red">@String.Format("{0:MM/dd/yy}",@c.Ren)</td>
+        </tr>
+        }
+    </table>
+}
 
